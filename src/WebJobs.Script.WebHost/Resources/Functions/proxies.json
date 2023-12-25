@@ -1,13 +1,13 @@
 ﻿{
   "proxies": {
-    "PlaceholderProxyWarmupTest": {
+    "PlaceholderProxyLinpackTest": {
       "matchCondition": {
         "methods": [
           "GET"
         ],
-        "route": "/placeholderwarmuptest"
+        "route": "/placeholderlinpacktest"
       },
-      "backendUri": "https://localhost/api/warmup",
+      "backendUri": "https://localhost/api/linpack",
       "requestOverrides": {
         "backend.request.headers.accept": "text/plain"
       },
