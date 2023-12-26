@@ -17,6 +17,5 @@
         "direction": "out",
         "name": "$return"
       }
-    ],
-    "pythonLanguageVersion": "3.9"
+    ]
   }

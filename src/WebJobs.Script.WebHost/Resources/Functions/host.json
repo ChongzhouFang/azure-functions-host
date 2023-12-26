@@ -7,6 +7,6 @@
   "functions": ["Linpack"],
   "managedDependency": {
     "enabled": true
-  },
-  "pythonLanguageVersion": "3.9"
+  }
+
 }
