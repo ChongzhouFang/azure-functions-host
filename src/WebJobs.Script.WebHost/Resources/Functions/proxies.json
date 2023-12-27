@@ -1,13 +1,13 @@
 ﻿{
   "proxies": {
-    "PlaceholderProxyImageprocessingTest": {
+    "PlaceholderProxyMatmulTest": {
       "matchCondition": {
         "methods": [
           "GET"
         ],
-        "route": "/placeholderimageprocessingtest"
+        "route": "/placeholdermatmultest"
       },
-      "backendUri": "https://localhost/api/imageprocessing",
+      "backendUri": "https://localhost/api/matmul",
       "requestOverrides": {
         "backend.request.headers.accept": "text/plain"
       },
