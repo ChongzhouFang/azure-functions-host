@@ -1,13 +1,13 @@
 ﻿{
   "proxies": {
-    "PlaceholderProxyChameleonTest": {
+    "PlaceholderProxyImageprocessingTest": {
       "matchCondition": {
         "methods": [
           "GET"
         ],
-        "route": "/placeholderfloatoperationtest"
+        "route": "/placeholderimageprocessingtest"
       },
-      "backendUri": "https://localhost/api/floatoperation",
+      "backendUri": "https://localhost/api/imageprocessing",
       "requestOverrides": {
         "backend.request.headers.accept": "text/plain"
       },
