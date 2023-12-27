@@ -1,13 +1,13 @@
 ﻿{
   "proxies": {
-    "PlaceholderProxyLinpackTest": {
+    "PlaceholderProxyChameleonTest": {
       "matchCondition": {
         "methods": [
           "GET"
         ],
-        "route": "/placeholderlinpacktest"
+        "route": "/placeholderchameleontest"
       },
-      "backendUri": "https://localhost/api/linpack",
+      "backendUri": "https://localhost/api/chameleon",
       "requestOverrides": {
         "backend.request.headers.accept": "text/plain"
       },
