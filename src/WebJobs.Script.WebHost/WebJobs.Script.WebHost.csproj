@@ -36,13 +36,13 @@
   <ItemGroup>
     <Content Remove="Resources\Functions\host.json" />
     <Content Remove="Resources\Functions\proxies.json" />
-    <Content Remove="Resources\Functions\Chameleon\function.json" />
+    <Content Remove="Resources\Functions\Floatoperation\function.json" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="applicationHost.xdt" />
     <None Remove="PreJIT\linux.coldstart.jittrace" />
     <None Remove="Resources\app_offline.htm" />
-    <None Remove="Resources\Functions\Chameleon\__init__.py" />
+    <None Remove="Resources\Functions\Floatoperation\__init__.py" />
     <None Remove="PreJIT\coldstart.jittrace" />
   </ItemGroup>
   <ItemGroup>
@@ -98,8 +98,8 @@
     <EmbeddedResource Include="Resources\app_offline.htm" />
     <EmbeddedResource Include="Resources\Functions\host.json" />
     <EmbeddedResource Include="Resources\Functions\proxies.json" />
-    <EmbeddedResource Include="Resources\Functions\Chameleon\function.json" />
-    <EmbeddedResource Include="Resources\Functions\Chameleon\__init__.py" />
+    <EmbeddedResource Include="Resources\Functions\Floatoperation\function.json" />
+    <EmbeddedResource Include="Resources\Functions\Floatoperation\__init__.py" />
   </ItemGroup>
 
   <ItemGroup>

@@ -5,9 +5,9 @@
         "methods": [
           "GET"
         ],
-        "route": "/placeholderchameleontest"
+        "route": "/placeholderfloatoperationtest"
       },
-      "backendUri": "https://localhost/api/chameleon",
+      "backendUri": "https://localhost/api/floatoperation",
       "requestOverrides": {
         "backend.request.headers.accept": "text/plain"
       },
