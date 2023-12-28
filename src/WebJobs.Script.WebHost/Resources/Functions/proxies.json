@@ -1,13 +1,13 @@
 ﻿{
   "proxies": {
-    "PlaceholderProxyPyaesTest": {
+    "PlaceholderProxyJsondumpsloadsTest": {
       "matchCondition": {
         "methods": [
           "GET"
         ],
-        "route": "/placeholderpyaestest"
+        "route": "/placeholderjsondumpsloadstest"
       },
-      "backendUri": "https://localhost/api/pyaes",
+      "backendUri": "https://localhost/api/jsondumpsloads",
       "requestOverrides": {
         "backend.request.headers.accept": "text/plain"
       },
