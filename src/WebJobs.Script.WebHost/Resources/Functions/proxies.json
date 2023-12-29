@@ -1,13 +1,13 @@
 ﻿{
   "proxies": {
-    "PlaceholderProxyStartupTest": {
+    "PlaceholderProxyDynamichtmlTest": {
       "matchCondition": {
         "methods": [
           "GET"
         ],
-        "route": "/placeholderstartuptest"
+        "route": "/placeholderdynamichtmltest"
       },
-      "backendUri": "https://localhost/api/startup",
+      "backendUri": "https://localhost/api/dynamichtml",
       "requestOverrides": {
         "backend.request.headers.accept": "text/plain"
       },
