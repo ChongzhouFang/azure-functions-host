@@ -109,8 +109,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     # download_path = "/tmp/" + blob_name
     # block_blob_service.get_blob_to_path(container_name, blob_name, download_path)
     # logging.info("Downloading blob to " + download_path)
-    print(os.system('pwd'))
-    os.system('wget \"https://en.wikipedia.org/wiki/Lenna#/media/File:Lenna_(test_image).png\" -O /tmp/lenna.png')
-    latency, path_list = image_processing('lenna.png', '/tmp/lenna.png')
+    SCRIPT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__)))
+    latency, path_list = image_processing('lenna.png', os.path.join(SCRIPT_DIR, 'image', 'lenna.png'))
 
     return func.HttpResponse(str(latency))
