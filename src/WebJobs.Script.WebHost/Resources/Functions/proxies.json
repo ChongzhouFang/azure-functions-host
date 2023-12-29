@@ -1,13 +1,13 @@
 ﻿{
   "proxies": {
-    "PlaceholderProxyMatmulTest": {
+    "PlaceholderProxyStartupTest": {
       "matchCondition": {
         "methods": [
           "GET"
         ],
-        "route": "/placeholdermatmultest"
+        "route": "/placeholderstartuptest"
       },
-      "backendUri": "https://localhost/api/matmul",
+      "backendUri": "https://localhost/api/startup",
       "requestOverrides": {
         "backend.request.headers.accept": "text/plain"
       },
