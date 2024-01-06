@@ -32,4 +32,4 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     latency = time() - start
 
-    return func.HttpResponse(str(latency))
+    return func.HttpResponse('benchmark pyaes runtime: ' + str(latency))
