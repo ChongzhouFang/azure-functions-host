@@ -36,4 +36,4 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     N = 10
     latency = str(linpack(N))
 
-    return func.HttpResponse(latency)
+    return func.HttpResponse('benchmark linpack runtime: ' + latency)
