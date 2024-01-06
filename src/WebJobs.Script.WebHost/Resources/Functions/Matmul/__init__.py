@@ -18,4 +18,4 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     N = 100
     latency = str(matmul(N))
 
-    return func.HttpResponse(latency)
+    return func.HttpResponse('benchmark matmul runtime: ' + latency)
