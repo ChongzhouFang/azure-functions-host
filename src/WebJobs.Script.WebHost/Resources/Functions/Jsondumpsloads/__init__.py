@@ -16,4 +16,4 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     str_json = json.dumps(json_data, indent=4)
     latency = time() - start
 
-    return func.HttpResponse('benchmark jsondumpsloads runtime: ' + 'latency : ' + str(latency) + '/ network : ' + str(network))
+    return func.HttpResponse('benchmark jsondumpsloads runtime: ' + 'latency : ' + str(latency) + '/ network : ' + str(network) + '\n')
