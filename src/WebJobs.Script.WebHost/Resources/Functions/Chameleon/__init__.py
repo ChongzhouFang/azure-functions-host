@@ -37,4 +37,4 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     data = tmpl.render(options=options)
     latency = time() - start
 
-    return func.HttpResponse('benchmark chameleon runtime: ' + str(latency))
+    return func.HttpResponse('benchmark chameleon runtime: ' + str(latency) + '\n')
