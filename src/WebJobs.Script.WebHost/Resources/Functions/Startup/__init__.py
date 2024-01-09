@@ -8,4 +8,4 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     latency = str(startTime)
 
-    return func.HttpResponse('benchmark startup runtime: ' + latency)
+    return func.HttpResponse('benchmark startup runtime: ' + latency + '\n')
