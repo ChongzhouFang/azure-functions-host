@@ -112,4 +112,4 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     SCRIPT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__)))
     latency, path_list = image_processing('lenna.png', os.path.join(SCRIPT_DIR, 'image', 'lenna.png'))
 
-    return func.HttpResponse('benchmark imageprocessing runtime: ' + str(latency))
+    return func.HttpResponse('benchmark imageprocessing runtime: ' + str(latency) + '\n')
