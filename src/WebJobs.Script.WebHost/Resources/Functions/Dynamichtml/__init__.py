@@ -19,4 +19,4 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     print(html)
     latency = str(time() - startTime)
 
-    return func.HttpResponse('benchmark dynamichtml runtime: ' + latency)
+    return func.HttpResponse('benchmark dynamichtml runtime: ' + latency + '\n')
