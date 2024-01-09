@@ -17,4 +17,4 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     N = 10
     latency = str(float_operations(N))
 
-    return func.HttpResponse('benchmark floatoperation runtime: ' + latency)
+    return func.HttpResponse('benchmark floatoperation runtime: ' + latency + '\n')
