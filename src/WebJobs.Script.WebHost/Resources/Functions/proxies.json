@@ -1,13 +1,13 @@
 ﻿{
   "proxies": {
-    "PlaceholderProxyChameleonTest": {
+    "PlaceholderProxyHellowebTest": {
       "matchCondition": {
         "methods": [
           "GET"
         ],
-        "route": "/placeholderchameleontest"
+        "route": "/placeholderhellowebtest"
       },
-      "backendUri": "https://localhost/api/chameleon",
+      "backendUri": "https://localhost/api/helloweb",
       "requestOverrides": {
         "backend.request.headers.accept": "text/plain"
       },

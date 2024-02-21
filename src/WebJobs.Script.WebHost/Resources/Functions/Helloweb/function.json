@@ -1,5 +1,5 @@
 {
-    "scriptFile": "__init__.py",
+    "scriptFile": "index.js",
     "bindings": [
       {
         "authLevel": "anonymous",
@@ -10,7 +10,7 @@
           "get",
           "post"
         ],
-        "route": "{x:regex(^(chameleon|pythonhttpchameleon)$)}"
+        "route": "{x:regex(^(helloweb|nodejshttphelloweb)$)}"
       },
       {
         "type": "http",
