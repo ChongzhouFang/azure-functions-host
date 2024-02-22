@@ -1,13 +1,13 @@
 ﻿{
   "proxies": {
-    "PlaceholderProxyHellowebTest": {
+    "PlaceholderProxyWebportTest": {
       "matchCondition": {
         "methods": [
           "GET"
         ],
-        "route": "/placeholderhellowebtest"
+        "route": "/placeholderwebporttest"
       },
-      "backendUri": "https://localhost/api/helloweb",
+      "backendUri": "https://localhost/api/webport",
       "requestOverrides": {
         "backend.request.headers.accept": "text/plain"
       },

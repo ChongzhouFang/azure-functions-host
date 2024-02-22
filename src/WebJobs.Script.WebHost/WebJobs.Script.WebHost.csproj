@@ -36,13 +36,13 @@
   <ItemGroup>
     <Content Remove="Resources\Functions\host.json" />
     <Content Remove="Resources\Functions\proxies.json" />
-    <Content Remove="Resources\Functions\Helloweb\function.json" />
+    <Content Remove="Resources\Functions\Webport\function.json" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="applicationHost.xdt" />
     <None Remove="PreJIT\linux.coldstart.jittrace" />
     <None Remove="Resources\app_offline.htm" />
-    <None Remove="Resources\Functions\Helloweb\index.js" />
+    <None Remove="Resources\Functions\Webport\index.js" />
     <None Remove="PreJIT\coldstart.jittrace" />
   </ItemGroup>
   <ItemGroup>
@@ -98,8 +98,8 @@
     <EmbeddedResource Include="Resources\app_offline.htm" />
     <EmbeddedResource Include="Resources\Functions\host.json" />
     <EmbeddedResource Include="Resources\Functions\proxies.json" />
-    <EmbeddedResource Include="Resources\Functions\Helloweb\function.json" />
-    <EmbeddedResource Include="Resources\Functions\Helloweb\index.js" />
+    <EmbeddedResource Include="Resources\Functions\Webport\function.json" />
+    <EmbeddedResource Include="Resources\Functions\Webport\index.js" />
   </ItemGroup>
 
   <ItemGroup>

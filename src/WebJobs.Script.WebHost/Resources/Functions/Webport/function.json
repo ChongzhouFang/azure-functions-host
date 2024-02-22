@@ -10,7 +10,7 @@
           "get",
           "post"
         ],
-        "route": "{x:regex(^(helloweb|nodejshttphelloweb)$)}"
+        "route": "{x:regex(^(webport|nodejshttpwebport)$)}"
       },
       {
         "type": "http",
