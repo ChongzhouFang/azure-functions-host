@@ -139,8 +139,10 @@ function getRandomFloat(max) {
  */
 async function initUnopSpam(instruction) {
   const wasm = fs.readFileSync(path.join(__dirname, `build/${instruction}_spam.wasm`));
-  let instance = await WebAssembly.instantiateStreaming(wasm);
-  var spam = await instance.exports.spam;
+  // let instance = await WebAssembly.instantiateStreaming(wasm);
+  // var spam = await instance.exports.spam;
+  let lib = await WebAssembly.instantiate(wasm, {});
+  let spam = lib.instance.exports.spam;
   return spam;
 }
 
@@ -154,8 +156,10 @@ async function initUnopSpam(instruction) {
  */
 async function initPunopSpam(instructions) {
   const wasm = fs.readFileSync(path.join(__dirname, `build/${instructions[0]}_${instructions[1]}_spam.wasm`));
-  let instance = await WebAssembly.instantiateStreaming(wasm);
-  var spam = await instance.exports.spam;
+  // let instance = await WebAssembly.instantiateStreaming(wasm);
+  // var spam = await instance.exports.spam;
+  let lib = await WebAssembly.instantiate(wasm, {});
+  let spam = lib.instance.exports.spam;
   return spam;
 }
 
@@ -179,8 +183,10 @@ async function initMemopSpam(instruction) {
   // Don't forget to clean memory or regularly close the browser.
   // Who knew you could have memory leaks in the browser :D
   var wasm = await fs.readFileSync(path.join(__dirname, `build/${instruction}_spam.wasm`));
-  let instance = await WebAssembly.instantiateStreaming(wasm, {env: {mem: memory}});
-  var spam = await instance.exports.spam;
+  // let instance = await WebAssembly.instantiateStreaming(wasm, {env: {mem: memory}});
+  // var spam = await instance.exports.spam;
+  let lib = await WebAssembly.instantiate(wasm, {});
+  let spam = lib.instance.exports.spam;
   return spam;
 }
 
@@ -332,17 +338,18 @@ module.exports = async function (context, message) {
     var timing;
     var timinglist;
     console.log('Executing');
-    timinglist = [];
+    timinglist = {};
     try{
         for (instruction in ALLOP) {
-            console.log(`Trying instruction ${ALLOP[instruction]}`);
-            timing = await testInstruction(ALLOP[instruction]);
-            timinglist.concat(timing);
+          console.log(`Trying instruction ${ALLOP[instruction]}`);
+          timing = await testInstruction(ALLOP[instruction]);
+          // console.log(timing);
+          timinglist[ALLOP[instruction]] = timing;
         }
         res = {
             status:200,
             body: timinglist,
-            headers: {
+            headers: { 
                 'Content-Type': 'application/json'
             }
         };
