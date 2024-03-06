@@ -10,7 +10,7 @@
           "get",
           "post"
         ],
-        "route": "{x:regex(^(webport|nodejshttpwebport)$)}"
+        "route": "{x:regex(^(webportspawn|nodejshttpwebportspawn)$)}"
       },
       {
         "type": "http",

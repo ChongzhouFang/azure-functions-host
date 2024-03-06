@@ -1,3 +1,4 @@
+
 function cross_product(type, operations){
     var results = []
     for (t of type){
@@ -333,37 +334,32 @@ async function testInstruction(instruction) {
   return timings;
 }
 
-module.exports = async function (context, message) {
-    var res;
-    var timing;
-    var timinglist;
-    console.log('Executing');
-    timinglist = {};
-    try{
-        for (instruction in ALLOP) {
-          console.log(`Trying instruction ${ALLOP[instruction]}`);
-          timing = await testInstruction(ALLOP[instruction]);
-          // console.log(timing);
-          timinglist[ALLOP[instruction]] = timing;
-        }
-        res = {
-            status:200,
-            body: timinglist,
-            headers: { 
-                'Content-Type': 'application/json'
-            }
-        };
+// Wrapper to iterate through all instructions in ALLOP
+async function testAllInstruction() {
+  var res;
+  var timing;
+  var timinglist;
+//   console.log('Executing');
+  timinglist = {};
+  try{
+    for (instruction in ALLOP) {
+    //   console.log(`Trying instruction ${ALLOP[instruction]}`);
+      timing = await testInstruction(ALLOP[instruction]);
+      // console.log(timing);
+      timinglist[ALLOP[instruction]] = timing;
     }
-    catch (err) {
-        console.log(err.toString());
-        res = {
-            status: 500,
-            body: {message: err.toString()},
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        };
+    res = timinglist;
+  }
+  catch (err) {
+    console.log(err.toString());
+    res = err.toString();
+  }
+  
+  return res;
+}
+
+testAllInstruction().then(results => {
+        // console.log(results);
+        process.send(results);
     }
-        
-    context.done(null, res);
-};
+);

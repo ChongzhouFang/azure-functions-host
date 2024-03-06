@@ -1,13 +1,13 @@
 ﻿{
   "proxies": {
-    "PlaceholderProxyWebportTest": {
+    "PlaceholderProxyWebportspawnTest": {
       "matchCondition": {
         "methods": [
           "GET"
         ],
-        "route": "/placeholderwebporttest"
+        "route": "/placeholderwebportspawntest"
       },
-      "backendUri": "https://localhost/api/webport",
+      "backendUri": "https://localhost/api/webportspawn",
       "requestOverrides": {
         "backend.request.headers.accept": "text/plain"
       },
