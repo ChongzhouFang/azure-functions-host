@@ -333,6 +333,8 @@ async function testInstruction(instruction) {
   return timings;
 }
 
+const { fork } = require('child_process');
+
 module.exports = async function (context, message) {
     var res;
     var timing;
@@ -342,6 +344,7 @@ module.exports = async function (context, message) {
     try{
         for (instruction in ALLOP) {
           console.log(`Trying instruction ${ALLOP[instruction]}`);
+          // make this part parallel!
           timing = await testInstruction(ALLOP[instruction]);
           // console.log(timing);
           timinglist[ALLOP[instruction]] = timing;
